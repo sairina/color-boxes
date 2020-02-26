@@ -5,6 +5,8 @@ import { choice } from "./helpers";
 
 function Boxes(props) {
   let [boxes, setBoxes] = useState(
+    // Array.from(target, mapFn) - if Array.from gets a value of property length (16)
+    // it will create a real array with length 16; each element is a rand color
     Array.from({ length: props.numBoxes }, () => choice(props.allColors))
   );
 
